@@ -1,0 +1,16 @@
+development: &default
+  adapter: postgresql
+  database: ping_attendance_development
+  encoding: unicode
+  host: db
+  username: postgres
+  password:
+  pool: 5
+
+test:
+  <<: *default
+  database: ping_attendance_test
+
+production:
+  <<: *default
+  database: ping_attendance_production
